@@ -8,8 +8,6 @@ A minimal HTML/CSS chat interface with a welcome message, message area, text inp
 
 ## Current state
 
-<badge></badge>
-
 The repository currently contains:
 - `index.html` — the chat layout and a script reference to `script.js`.
 - `styles.css` — basic chat window and message styling.
