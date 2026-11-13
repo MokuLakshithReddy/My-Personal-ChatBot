@@ -1,41 +1,47 @@
-# My Personal Chatbot — Basic Web UI Scaffold
+# Personal Chatbot — Browser UI Prototype
 
-A minimal HTML/CSS chat interface with a welcome message, message area, text input, and Send button.
+A minimal static chat interface wired to the OpenAI Chat Completions API using the gpt-4o-mini model. The repository contains a single HTML page, CSS styling, and a small JavaScript request handler.
 
-![GitHub stars](https://img.shields.io/github/stars/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square&label=stars)
-![GitHub forks](https://img.shields.io/github/forks/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square&label=forks)
-![Last commit](https://img.shields.io/github/last-commit/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square)
+[![Stars](https://img.shields.io/github/stars/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square)](https://github.com/MokuLakshithReddy/My-Personal-ChatBot/stargazers)
+[![Forks](https://img.shields.io/github/forks/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square)](https://github.com/MokuLakshithReddy/My-Personal-ChatBot/forks)
+[![Last commit](https://img.shields.io/github/last-commit/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square)](https://github.com/MokuLakshithReddy/My-Personal-ChatBot/commits/main)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=111)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![API](https://img.shields.io/badge/API-OpenAI%20Chat%20Completions-412991?logo=openai)](https://platform.openai.com/docs/)
 
-## Current state
+## Why it matters
 
-The repository currently contains:
-- `index.html` — the chat layout and a script reference to `script.js`.
-- `styles.css` — basic chat window and message styling.
+This project is an early exploration of a conversational UI and an API-backed assistant. It provides a simple starter interface for interacting with language models.
 
-**Known blocker:** `script.js` is referenced by the HTML but is not present in the current repository snapshot. The earlier README also refers to `Script.js.js`, which is not present either. As a result, message submission and chatbot responses are not implemented in this checkout.
-
-## Intended interaction
+## Project flow
 
 ```mermaid
-flowchart TD
-    A["User types a message"] --> B["Send button"]
-    B -. "Not implemented: missing script.js" .-> C["Message handling"]
-    C -. "Not implemented" .-> D["Chatbot / model API"]
-    D -. "Not implemented" .-> E["Assistant response"]
+flowchart LR
+    A["Chat input"] --> B["Browser JavaScript"]
+    B --> C["OpenAI Chat Completions API"]
+    C --> D["Assistant response"]
+    D --> E["Chat message list"]
 ```
 
-## Run the current UI
+## Current implementation status
 
-Open `index.html` in a modern browser. The static layout and CSS should render, but the chat Send action will not work until the missing JavaScript handler is added.
+> **Implementation notes:** `index.html` references `script.js`, while the tracked script file is currently `script.js.js`. In addition, the API key constant in that file is empty by default.
 
-## What is needed to complete it
+## Security warning
 
-1. Add `script.js` and implement message rendering, input validation, and error states.
-2. Decide which model/provider API should power responses.
-3. Keep API credentials on a server or secure backend; never expose a private API key in browser JavaScript.
-4. Add a safe configuration example, setup instructions, and tests.
-5. Add screenshots or a short recording after the complete interaction works.
+Do **not** put a real OpenAI API key in browser client-side JavaScript in production. Anyone who loads the page can inspect the key. For a production deployment, send chat requests through a server-side proxy or backend endpoint that reads the API key from environment variables and never exposes it to client browsers.
 
-No AI model integration, functional chatbot test, or benchmark is currently present in this repository.
+## Repository files
+
+| File | Purpose |
+|---|---|
+| `index.html` | Chat page layout, container, and input elements |
+| `styles.css` | Chat layout, bubble styling, and dark theme variables |
+| `script.js.js` | Browser-side request and message-handling logic |
+
+## Run locally
+
+Open `index.html` in a modern browser to inspect the layout. For functional messaging, align the script filename reference and configure an API endpoint.
+
+No automated test suite or external benchmark is currently included in this repository.
 
 [Browse the source](https://github.com/MokuLakshithReddy/My-Personal-ChatBot)
