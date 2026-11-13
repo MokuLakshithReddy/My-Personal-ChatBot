@@ -1,5 +1,8 @@
 # Personal Chatbot — Browser UI Prototype
 
+[![Forks](https://img.shields.io/github/forks/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square)](https://github.com/MokuLakshithReddy/My-Personal-ChatBot/forks) [![Open Issues](https://img.shields.io/github/issues/MokuLakshithReddy/My-Personal-ChatBot?style=flat-square)](https://github.com/MokuLakshithReddy/My-Personal-ChatBot/issues)
+
+
 A minimal static chat interface wired to the OpenAI Chat Completions API using the gpt-4o-mini model. The repository contains a single HTML page, CSS styling, and a small JavaScript request handler.
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=111)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
